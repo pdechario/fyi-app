@@ -1,0 +1,16 @@
+{
+  "collection": "@nestjs/schematics",
+  "monorepo": true,
+  "sourceRoot": "apps/fyi-app/src",
+  "projects": {
+    "fyi-app": {
+      "type": "application",
+      "root": "apps/fyi-app",
+      "entryFile": "main",
+      "sourceRoot": "apps/fyi-app/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/fyi-app/tsconfig.app.json"
+      }
+    }
+  }
+}
