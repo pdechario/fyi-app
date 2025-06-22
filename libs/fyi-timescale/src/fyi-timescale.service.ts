@@ -1,3 +1,7 @@
+/**
+ * Logic for interacting with Timescale DB.
+ */
+
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm'; 

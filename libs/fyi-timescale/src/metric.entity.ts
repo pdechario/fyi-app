@@ -1,3 +1,7 @@
+/**
+ * TypeORM entity definition
+ */
+
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn } from 'typeorm';
 
 @Entity()
