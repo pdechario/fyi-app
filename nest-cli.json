@@ -12,6 +12,15 @@
         "tsConfigPath": "apps/fyi-app/tsconfig.app.json"
       }
     },
+    "fyi-datapipeline": {
+      "type": "library",
+      "root": "libs/fyi-datapipeline",
+      "entryFile": "index",
+      "sourceRoot": "libs/fyi-datapipeline/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/fyi-datapipeline/tsconfig.lib.json"
+      }
+    },
     "fyi-timescale": {
       "type": "library",
       "root": "libs/fyi-timescale",

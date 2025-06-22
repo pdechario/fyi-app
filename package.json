@@ -79,6 +79,7 @@
       "<rootDir>/libs/"
     ],
     "moduleNameMapper": {
+      "^@app/fyi-datapipeline(|/.*)$": "<rootDir>/libs/fyi-datapipeline/src/$1",
       "^@app/webhook-triggers(|/.*)$": "<rootDir>/libs/webhook-triggers/src/$1",
       "^@timescale/timescale(|/.*)$": "<rootDir>/libs/timescale/src/$1"
     }

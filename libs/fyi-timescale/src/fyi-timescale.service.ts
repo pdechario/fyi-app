@@ -22,4 +22,9 @@ export class TimescaleService {
     findAll(){
         return this.metricRepo.find();
     }
+
+    // Need to add additional ingestions, additional repos with new metrics. Eventually transformations of the repos into more sophisticated structures.
+    saveMetric(metric: Partial<Metric>){
+        return this.metricRepo.save(metric)
+    }
 }

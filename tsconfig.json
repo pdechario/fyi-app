@@ -12,6 +12,12 @@
     "baseUrl": "./",
     "incremental": true,
     "paths": {
+      "@app/fyi-datapipeline": [
+        "libs/fyi-datapipeline/src"
+      ],
+      "@app/fyi-datapipeline/*": [
+        "libs/fyi-datapipeline/src/*"
+      ],
       "@app/webhook-triggers": [
         "libs/webhook-triggers/src"
       ],

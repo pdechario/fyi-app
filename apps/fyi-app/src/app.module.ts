@@ -4,6 +4,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { TimescaleModule, typeOrmConfig } from '@fyi-timescale';
 import { MetricsController } from '../metrics.controller';  
 import { WebhookTriggersModule } from '@app/webhook-triggers';
+import { FyiDatapipelineModule } from '@app/fyi-datapipeline';
+import { AppController } from './app.controller';
 
 @Module({
   imports: [
@@ -11,7 +13,9 @@ import { WebhookTriggersModule } from '@app/webhook-triggers';
     TypeOrmModule.forRoot(typeOrmConfig),
     TimescaleModule,
     WebhookTriggersModule,
+    FyiDatapipelineModule,
+    TimescaleModule,
   ],
-  controllers: [MetricsController],
+  controllers: [AppController, MetricsController],
 })
 export class AppModule {}
