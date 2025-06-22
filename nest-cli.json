@@ -11,6 +11,18 @@
       "compilerOptions": {
         "tsConfigPath": "apps/fyi-app/tsconfig.app.json"
       }
+    },
+    "timescale": {
+      "type": "library",
+      "root": "libs/timescale",
+      "entryFile": "index",
+      "sourceRoot": "libs/timescale/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/timescale/tsconfig.lib.json"
+      }
     }
+  },
+  "compilerOptions": {
+    "webpack": true
   }
 }
