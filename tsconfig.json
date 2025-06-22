@@ -12,6 +12,12 @@
     "baseUrl": "./",
     "incremental": true,
     "paths": {
+      "@app/webhook-triggers": [
+        "libs/webhook-triggers/src"
+      ],
+      "@app/webhook-triggers/*": [
+        "libs/webhook-triggers/src/*"
+      ],
       "@fyi-timescale": [
         "libs/fyi-timescale/src"
       ],

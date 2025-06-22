@@ -20,16 +20,29 @@
       "compilerOptions": {
         "tsConfigPath": "libs/fyi-timescale/tsconfig.lib.json"
       }
+    },
+    "webhook-triggers": {
+      "type": "library",
+      "root": "libs/webhook-triggers",
+      "entryFile": "index",
+      "sourceRoot": "libs/webhook-triggers/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/webhook-triggers/tsconfig.lib.json"
+      }
     }
   },
-  "compilerOptions":{
-    "webpack":true,
+  "compilerOptions": {
+    "webpack": true,
     "tsConfigPath": "tsconfig.build.json",
     "assets": [],
     "watchAssets": true,
-    "paths":{
-        "@fyi-timescale": ["libs/fyi-timescale/src"],
-        "@fyi-timescale/*": ["libs/fyi-timescale/src/*"] 
+    "paths": {
+      "@fyi-timescale": [
+        "libs/fyi-timescale/src"
+      ],
+      "@fyi-timescale/*": [
+        "libs/fyi-timescale/src/*"
+      ]
     }
   }
 }

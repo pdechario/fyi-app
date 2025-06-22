@@ -79,6 +79,7 @@
       "<rootDir>/libs/"
     ],
     "moduleNameMapper": {
+      "^@app/webhook-triggers(|/.*)$": "<rootDir>/libs/webhook-triggers/src/$1",
       "^@timescale/timescale(|/.*)$": "<rootDir>/libs/timescale/src/$1"
     }
   }
