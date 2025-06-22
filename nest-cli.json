@@ -12,17 +12,24 @@
         "tsConfigPath": "apps/fyi-app/tsconfig.app.json"
       }
     },
-    "timescale": {
+    "fyi-timescale": {
       "type": "library",
-      "root": "libs/timescale",
+      "root": "libs/fyi-timescale",
       "entryFile": "index",
-      "sourceRoot": "libs/timescale/src",
+      "sourceRoot": "libs/fyi-timescale/src",
       "compilerOptions": {
-        "tsConfigPath": "libs/timescale/tsconfig.lib.json"
+        "tsConfigPath": "libs/fyi-timescale/tsconfig.lib.json"
       }
     }
   },
-  "compilerOptions": {
-    "webpack": true
+  "compilerOptions":{
+    "webpack":true,
+    "tsConfigPath": "tsconfig.build.json",
+    "assets": [],
+    "watchAssets": true,
+    "paths":{
+        "@fyi-timescale": ["libs/fyi-timescale/src"],
+        "@fyi-timescale/*": ["libs/fyi-timescale/src/*"] 
+    }
   }
 }

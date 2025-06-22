@@ -13,7 +13,7 @@ export class Metric {
   name: string;
 
   @Column()
-  duration: number;
+  duration: string;
 
   @Column()
   status: string;

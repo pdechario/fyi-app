@@ -9,5 +9,4 @@ export const typeOrmConfig: TypeOrmModuleOptions = {
     url: process.env.DATABASE_URL,
     entities: [Metric],
     synchronize: true,
-    ssl: true,
 };

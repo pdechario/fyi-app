@@ -1,8 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { typeOrmConfig } from '@fyi-timescale/typeorm.config';  
-import { TimescaleModule } from '@fyi-timescale';
+import { TimescaleModule, typeOrmConfig } from '@fyi-timescale';
 import { MetricsController } from '../metrics.controller';  
 
 @Module({
