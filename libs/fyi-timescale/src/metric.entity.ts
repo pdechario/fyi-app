@@ -5,16 +5,19 @@
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn } from 'typeorm';
 
 @Entity()
-export class Metric{
-    @PrimaryGeneratedColumn()
-    id: number;
+export class Metric {
+  @PrimaryGeneratedColumn()
+  id: number;
 
-    @Column()
-    type: string;
+  @Column()
+  name: string;
 
-    @Column('float')
-    value: number;
+  @Column()
+  duration: number;
 
-    @CreateDateColumn()
-    timestamp: Date;
+  @Column()
+  status: string;
+
+  @Column({ type: 'timestamptz', default: () => 'CURRENT_TIMESTAMP' })
+  createdAt: Date;
 }

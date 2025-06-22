@@ -1,4 +1,4 @@
-name: deploy fyi-app to Fly.io
+name: deploy-to-fly-io
 
 on:
    workflow_dispatch:
@@ -46,3 +46,10 @@ jobs:
                     done
                     echo "App did not become healthy in time."
                     exit 1
+            # maybe
+            # - name: Stop all app machines
+            #   run: |
+            #     flyctl machines list --app fyi-app --json | jq -r '.[].id' | while read machine_id; do flyctl machines stop "$machines_id" --app fyi-app
+            #     done
+            #   env: 
+            #     FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}

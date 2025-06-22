@@ -1,28 +1,40 @@
+# fly.toml app configuration file generated for fyi-app-billowing-haze-6330 on 2025-06-22T01:53:20-04:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
 
-
-app = "fyi-app"
-primary_region = "mia"
+app = 'fyi-app-billowing-haze-6330'
+primary_region = 'mia'
 
 [build]
-    dockerfile = "Dockerfile"
+  dockerfile = 'Dockerfile'
 
 [env]
-    NODE_ENV = "production"
-    PORT = "3000"
+  NODE_ENV = 'production'
+  PORT = '3000'
+
+[[mounts]]
+  source = 'pg_data'
+  destination = '/data'
 
 [[services]]
-    internal_port = 3000
-    protocol = "tcp"
+  protocol = 'tcp'
+  internal_port = 3000
 
-[[services.ports]]
-    handlers = ["http"]
+  [[services.ports]]
     port = 80
+    handlers = ['http']
 
-[[services.ports]]
-    handlers = ["tls", "http"]
+  [[services.ports]]
     port = 443
+    handlers = ['tls', 'http']
 
-[[services.tcp_checks]]
-    grace_period = "5s"
-    interval = "15s"
-    timeout = "2s"
+  [[services.tcp_checks]]
+    interval = '15s'
+    timeout = '2s'
+    grace_period = '5s'
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
